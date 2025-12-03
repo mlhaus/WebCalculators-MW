@@ -53,9 +53,9 @@ public class HunterTemperatureServlet extends HttpServlet {
         if(!errorsFound) {
             try {
                 temperature = new HunterTemperature(Integer.parseInt(startValue),startType);
-            } catch(ArithmeticException e) {
-                req.setAttribute("generalError", "<li>There was an issue please try again.</li>");
+            } catch(Exception e) {
                 errorsFound = true;
+                req.setAttribute("generalError", "<li>The value entered was to lower please try again.</li>");
             }
         }
 
