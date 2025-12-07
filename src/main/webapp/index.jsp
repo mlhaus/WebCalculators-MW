@@ -12,6 +12,8 @@
     <li><a href="ingredient">Edward's Ingredient Calculator</a></li>
     <li><a href="CharacterFighter">Gabe's Character Fighter Calculator</a></li>
     <li><a href="depreciation">Dine Boro Depreciation Calculator</a></li>
+    <li><a href="currency">Lawson's Currency Calculator</a> </li>
+    <li><a href="setcalculator">Blake's Set Calculator</a></li>
 </ul>
 
 </body>
