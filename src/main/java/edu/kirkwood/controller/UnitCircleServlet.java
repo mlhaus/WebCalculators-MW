@@ -1,3 +1,8 @@
+/*
+ ZeeKonCal
+ 12/7/2025
+ Website back-end code that calculates the cosine, sine, and quadrant of any degree or radian angle.
+*/
 package edu.kirkwood.controller;
 
 import edu.kirkwood.model.Angle;
@@ -48,8 +53,9 @@ public class UnitCircleServlet extends HttpServlet {
             if(unit.equals("degrees")) {
                 isDegrees = true;
             }
+            double userAngle = angle.getAngle();
             angle.correctAngle(isDegrees);
-            String result = formatAngleDetails(angle, isDegrees);
+            String result = formatAngleDetails(angle, isDegrees, userAngle);
             req.setAttribute("result", result);
         }
         // Step 3: Forward the request and response objects to the JSP

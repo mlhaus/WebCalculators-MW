@@ -1,6 +1,8 @@
-//ZeeKonCal
-//9/27/2025-10/1/2025
-//An angle object class for the unitCircleCalculator class
+/*
+ ZeeKonCal
+ 9/27/2025-12/7/2025
+ An angle object class for the unitCircleCalculator class
+*/
 package edu.kirkwood.model;
 
 import edu.kirkwood.shared.Helpers;
@@ -137,9 +139,9 @@ public class Angle {
         return returnedString;
     }
 
-    public static String formatAngleDetails(Angle angle, boolean isDegrees) {
-        String formattedAngle = String.format("%s %s", Helpers.round(isDegrees? angle.getAngle() : Math.toRadians(angle.getAngle()), 3), (isDegrees ? "degrees" : "radians"));
-        return String.format("The sin of %s is %s\nThe cos of %s is %s\nYour angle is in quadrant %s.\n\n", formattedAngle,
+    public static String formatAngleDetails(Angle angle, boolean isDegrees, double userAngle) {
+        String formattedAngle = String.format("%s %s", Helpers.round(userAngle, 3), (isDegrees ? "degrees" : "radians"));
+        return String.format("The sin of %s is %s<br>The cos of %s is %s<br>Your angle is in quadrant %s.", formattedAngle,
                 angle.calcSin(), formattedAngle, angle.calcCos(), angle.getQuadrant());
     }
 }

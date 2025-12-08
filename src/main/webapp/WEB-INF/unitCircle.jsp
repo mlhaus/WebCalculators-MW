@@ -19,15 +19,26 @@
     <p class="lead">Enter an angle measure & a unit</p>
     <form method="POST" action="unitCircle">
         <div class="row">
-            <input type="text" class="form-control" placeholder="Angle Measure" aria-label="Angle Measure" name="angleMeasure" value="${num1}">
-            <div class="col-1 d-flex justify-content-center align-items-center display-3">
-                <select class="form-select form-select-lg" aria-label="Unit" name="unit">
-                    <option <c:if test="${unit == 'degrees'}">selected</c:if> value="degrees">degrees</option>
-                    <option <c:if test="${operator == 'radians'}">selected</c:if> value="radians">radians</option>
+            <div class="col-2">
+                <input type="text" class="form-control" placeholder="Angle Measure" aria-label="Angle Measure" name="angleMeasure" value="${angleMeasure}">
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center display-3">
+                <select class="form-select form-select-lg" aria-label="Unit" name="unit" value="${unit}">
+                    <option <c:if test="${unit == 'degrees'}">selected</c:if> value="degrees">Degrees</option>
+                    <option <c:if test="${unit == 'radians'}">selected</c:if> value="radians">Radians</option>
                 </select>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row">
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" style="background-color: lightgoldenrodyellow;">
+                    <a href="${pageContext.request.contextPath}/">Main Menu</a>
+                </button>
+            </div>
+        </div>
     </form>
     <ul class="text-danger">
         ${angleMeasureError}
