@@ -10,6 +10,7 @@ public class Movie implements Comparable<Movie> {
     private String title;
     private int releaseYear;
     private String plot;
+    private String poster;
     
     public Movie() {
     }
@@ -89,5 +90,13 @@ public class Movie implements Comparable<Movie> {
     @Override
     public int hashCode() {
         return Objects.hash(id, title, releaseYear, plot);
+    }
+
+    public String getPoster() {
+        return poster;
+    }
+
+    public void setPoster(String poster) {
+        this.poster = poster;
     }
 }
