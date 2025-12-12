@@ -17,6 +17,7 @@
     <li><a href="depreciation">Dine Boro Depreciation Calculator</a></li>
     <li><a href="currency">Lawson's Currency Calculator</a> </li>
     <li><a href="setcalculator">Blake's Set Calculator</a></li>
+    <li><a href="investment">Lizbeth RA Investement Calculator</a></li>
 </ul>
 
 </body>
