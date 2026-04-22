@@ -7,6 +7,7 @@ import java.time.format.FormatStyle;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.function.BiFunction;
 
 public class Helpers {
 
@@ -140,6 +141,26 @@ public class Helpers {
             Double.parseDouble(s);
             return true;
         } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public static BiFunction<String, String, Double> getSum = (num1, num2) -> Double.valueOf(num1) + Double.valueOf(num2);
+
+    public static boolean isAnInt(String str) {
+        try{
+            Integer.parseInt(str);
+            return true;
+        } catch(NumberFormatException e){
+            return false;
+        }
+    }
+
+    public static boolean isANumber(String str) {
+        try{
+            Double.parseDouble(str);
+            return true;
+        } catch(NumberFormatException e){
             return false;
         }
     }
